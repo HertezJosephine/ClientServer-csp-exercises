@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>datetime-picker</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+	<style type="text/css">
+		.container {
+			margin-top: 40px;
+		}
+		.btn-primary {
+			width: 100%;
+		}
+	</style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script> 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script type='text/javascript'>
+		$( document ).ready(function() {
+      $('#datetimepicker1').datetimepicker();
+      $('#datetimepicker2').datetimepicker();
+      $('#datetimepicker3').datetimepicker();
+			$('#datetimepicker4').datetimepicker();
+		});
+	</script>
+    
+</head>
+<body>
+
+   <div style="border-color: #5fcf80"class="panel panel-primary">
+      <div style="background: #5fcf80; color: #fff" class="panel-heading"><b>WEDDING INFORMATION</b></div>
+      <div class="panel-body">
+        <br>
+         <form action="insert.php" method="POST">
+            <div class="row">
+               <div class='col-md-6'>
+                  <div class="form-group">
+                     <label class="control-label">Please specify your wedding date </label>
+                     <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" name="wedding_dt" value="" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <div class='col-md-6'>
+                  <div class="form-group">
+                     <label class="control-label">Set an appointment </label>
+                     <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" name="appointment_dt" value="" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        <br>
+            <label class="control-label">GROOM'S INFORMATION</label><hr style="padding: 0px; margin: 0px"><br>
+            <label class="control-label">Name of the Groom *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="g_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="g_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="g_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Mother's Name *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gm_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gm_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gm_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Father's Name *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gf_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gf_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="gf_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Date of Birth *</label>
+            <div class="row">
+              <div class='col-md-4'>
+                  <div class="form-group">
+                     <div class='input-group date' id='datetimepicker3'>
+                        <input type='text' class="form-control" name="g_birthdate" value="" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        <br>
+            <label class="control-label">BRIDE'S INFORMATION</label><hr style="padding: 0px; margin: 0px"><br>
+            <label class="control-label">Name of the Bride *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="b_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="b_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="b_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Mother's Name *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bm_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bm_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bm_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Father's Name *</label>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bf_fname" placeholder="Enter firstname*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bf_mname" placeholder="Enter middlename*" value="" required>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="bf_lname" placeholder="Enter lastname*" value="" required>
+                 </div>
+              </div>
+            </div>
+            <label class="control-label">Date of Birth *</label>
+            <div class="row">
+              <div class='col-md-4'>
+                  <div class="form-group">
+                     <div class='input-group date' id='datetimepicker4'>
+                        <input type='text' class="form-control" name="b_birthdate" value="" />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        <br>
+            <div class="row">
+               <div class='col-md-12'>
+                  <div class="form-group">
+                     <input type="submit" style="background: #5fcf80; color: #fff; border-color: #5fcf80" class="btn btn-primary" value="SUBMIT">
+                  </div>
+               </div>
+            </div>
+
+         </form>
+
+   </div>
+		
+</body>
+</html>
